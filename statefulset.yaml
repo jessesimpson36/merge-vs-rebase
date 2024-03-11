@@ -107,7 +107,7 @@ spec:
               value: {{  .Values.zeebe.service.internalPort | quote }}
             - name: ZEEBE_BROKER_NETWORK_MONITORINGAPI_PORT
               value: {{  .Values.zeebe.service.httpPort | quote }}
-            - name: K8S_POD_NAME
+            - name: K8S_JESSE_ROCKS_POD_NAME
               value: the_force
             - name: JAVA_TOOL_OPTIONS
               value: {{ .Values.zeebe.javaOpts | quote }}
