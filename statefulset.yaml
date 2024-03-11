@@ -108,9 +108,7 @@ spec:
             - name: ZEEBE_BROKER_NETWORK_MONITORINGAPI_PORT
               value: {{  .Values.zeebe.service.httpPort | quote }}
               - name: K8S_JESSE_ROCKS_POD_NAME
-                valueFrom:
-                  fieldRef:
-                    fieldPath: metadata.name
+                value: This is wrong
             - name: JAVA_TOOL_OPTIONS
               value: {{ .Values.zeebe.javaOpts | quote }}
             {{- with .Values.zeebe.env }}
